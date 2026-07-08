@@ -1,0 +1,21 @@
+# Base DuckDB — volumineuse et potentiellement sensible
+*.duckdb
+
+# Logs générés dans output/
+output/*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Environnement virtuel
+venv/
+env/
+.venv/
+
+# Variables d'environnement
+.env
+
+# macOS
+.DS_Store
