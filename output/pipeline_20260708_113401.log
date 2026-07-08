@@ -1,0 +1,219 @@
+11:34:01  INFO      ============================================================
+11:34:01  INFO        Pipeline HTR ALTO → XML filtré
+11:34:01  INFO      ============================================================
+11:34:01  INFO        Dossier ALTO   : /Users/maudmelinand/Desktop/LostMa-divers/htr_dum/arthurian
+11:34:01  INFO        Base DuckDB    : /Users/maudmelinand/Desktop/data-pipeline/databases/heurist.duckdb
+11:34:01  INFO        Dossier sortie : output
+11:34:01  INFO        Witness H-ID   : 48892
+11:34:01  INFO      
+11:34:01  INFO      ── Étape 1 : Fusion des fichiers ALTO ──────────────────
+11:34:01  INFO        Fichier produit : output/merged.xml
+11:34:01  INFO      
+11:34:01  INFO      ── Étape 2 : Chargement des page_ranges (DuckDB) ───────
+11:34:01  INFO        1 plage(s) valide(s) chargée(s) depuis DuckDB.
+11:34:01  INFO      
+11:34:01  INFO      ── Étape 3 : Filtrage par folio ────────────────────────
+11:34:01  INFO        ✗ f10-f-3v.jpg
+11:34:01  INFO        ✓ f100-f-48v.jpg
+11:34:01  INFO        ✓ f101-f-49r.jpg
+11:34:01  INFO        ✓ f102-f-49v.jpg
+11:34:01  INFO        ✓ f103-f-50r.jpg
+11:34:01  INFO        ✓ f104-f-50v.jpg
+11:34:01  INFO        ✓ f105-f-51r.jpg
+11:34:01  INFO        ✓ f106-f-51v.jpg
+11:34:01  INFO        ✓ f107-f-52r.jpg
+11:34:01  INFO        ✓ f108-f-52v.jpg
+11:34:01  INFO        ✓ f109-f-53r.jpg
+11:34:01  INFO        ✗ f11-f-4r.jpg
+11:34:01  INFO        ✓ f110-f-53v.jpg
+11:34:01  INFO        ✓ f111-f-54r.jpg
+11:34:01  INFO        ✓ f112-f-54v.jpg
+11:34:01  INFO        ✓ f113-f-55r.jpg
+11:34:01  INFO        ✓ f114-f-55v.jpg
+11:34:01  INFO        ✓ f115-f-56r.jpg
+11:34:01  INFO        ✓ f116-f-56v.jpg
+11:34:01  INFO        ✓ f117-f-57r.jpg
+11:34:01  INFO        ✓ f118-f-57v.jpg
+11:34:01  INFO        ✓ f119-f-58r.jpg
+11:34:01  INFO        ✗ f12-f-4v.jpg
+11:34:01  INFO        ✓ f120-f-58v.jpg
+11:34:01  INFO        ✓ f121-f-59r.jpg
+11:34:01  INFO        ✗ f125-f-61r.jpg
+11:34:01  INFO        ✗ f126-f-61v.jpg
+11:34:01  INFO        ✗ f128-f-62v.jpg
+11:34:01  INFO        ✗ f129-f-63r.jpg
+11:34:01  INFO        ✗ f13-f-5r.jpg
+11:34:01  INFO        ✗ f130-f-63v.jpg
+11:34:01  INFO        ✗ f131-f-64r.jpg
+11:34:01  INFO        ✗ f132-f-64v.jpg
+11:34:01  INFO        ✗ f133-f-65r.jpg
+11:34:01  INFO        ✗ f134-f-65v.jpg
+11:34:01  INFO        ✗ f135-f-66r.jpg
+11:34:01  INFO        ✗ f136-f-66v.jpg
+11:34:01  INFO        ✗ f137-f-67r.jpg
+11:34:01  INFO        ✗ f138-f-67v.jpg
+11:34:01  INFO        ✗ f139-f-68r.jpg
+11:34:01  INFO        ✗ f14-f-5v.jpg
+11:34:01  INFO        ✗ f140-f-68v.jpg
+11:34:01  INFO        ✗ f141-f-69r.jpg
+11:34:01  INFO        ✗ f142-f-69v.jpg
+11:34:01  INFO        ✗ f143-f-70r.jpg
+11:34:01  INFO        ✗ f144-f-70v.jpg
+11:34:01  INFO        ✗ f145-f-71r.jpg
+11:34:01  INFO        ✗ f146-f-71v.jpg
+11:34:01  INFO        ✗ f147-f-72r.jpg
+11:34:01  INFO        ✗ f148-f-72v.jpg
+11:34:01  INFO        ✗ f149-f-73r.jpg
+11:34:01  INFO        ✗ f150-f-73v.jpg
+11:34:01  INFO        ✗ f151-f-74r.jpg
+11:34:01  INFO        ✗ f152-f-74v.jpg
+11:34:01  INFO        ✗ f153-f-75r.jpg
+11:34:01  INFO        ✗ f154-f-75v.jpg
+11:34:01  INFO        ✗ f155-f-76r.jpg
+11:34:01  INFO        ✗ f156-f-76v.jpg
+11:34:01  INFO        ✗ f157-f-77r.jpg
+11:34:01  INFO        ✗ f158-f-77v.jpg
+11:34:01  INFO        ✗ f159-f-78r.jpg
+11:34:01  INFO        ✗ f16-f-6v.jpg
+11:34:01  INFO        ✗ f160-f-78v.jpg
+11:34:01  INFO        ✗ f161-f-79r.jpg
+11:34:01  INFO        ✗ f162-f-79v.jpg
+11:34:01  INFO        ✗ f163-f-80r.jpg
+11:34:01  INFO        ✗ f164-f-80v.jpg
+11:34:01  INFO        ✗ f165-f-81r.jpg
+11:34:01  INFO        ✗ f166-f-81v.jpg
+11:34:01  INFO        ✗ f167-f-82r.jpg
+11:34:01  INFO        ✗ f168-f-82v.jpg
+11:34:01  INFO        ✗ f169-f-83r.xml
+11:34:01  INFO        ✗ f17-f-7r.jpg
+11:34:01  INFO        ✗ f170-f-83v.jpg
+11:34:01  INFO        ✗ f171-f-84r.jpg
+11:34:01  INFO        ✗ f172-f-84v.jpg
+11:34:01  INFO        ✗ f173-f-85r.jpg
+11:34:01  INFO        ✗ f174-f-85v.jpg
+11:34:01  INFO        ✗ f175-f-86r.jpg
+11:34:01  INFO        ✗ f176-f-86v.jpg
+11:34:01  INFO        ✗ f177-f-87r.jpg
+11:34:01  INFO        ✗ f178-f-87v.jpg
+11:34:01  INFO        ✗ f179-f-88r.jpg
+11:34:01  INFO        ✗ f18-f-7v.jpg
+11:34:01  INFO        ✗ f180-f-88v.jpg
+11:34:01  INFO        ✗ f181-f-89r.jpg
+11:34:01  INFO        ✗ f182-f-89v.jpg
+11:34:01  INFO        ✗ f183-f-90r.jpg
+11:34:01  INFO        ✗ f184-f-90v.jpg
+11:34:01  INFO        ✗ f185-f-91r.jpg
+11:34:01  INFO        ✗ f186-f-91v.jpg
+11:34:01  INFO        ✗ f187-f-92r.jpg
+11:34:01  INFO        ✗ f188-f-92v.jpg
+11:34:01  INFO        ✗ f189-f-93r.jpg
+11:34:01  INFO        ✗ f19-f-8r.jpg
+11:34:01  INFO        ✗ f190-f-93v.jpg
+11:34:01  INFO        ✗ f191-f-94r.jpg
+11:34:01  INFO        ✗ f192-f-94v.jpg
+11:34:01  INFO        ✗ f193-f-95r.jpg
+11:34:01  INFO        ✗ f194-f-95v.jpg
+11:34:01  INFO        ✗ f195-f-96r.jpg
+11:34:01  INFO        ✗ f196-f-96v.jpg
+11:34:01  INFO        ✗ f197-f-97r.jpg
+11:34:01  INFO        ✗ f198-f-97v.jpg
+11:34:01  INFO        ✗ f199-f-98r.jpg
+11:34:01  WARNING     Impossible d'extraire le folio depuis : 'f2-insert.jpg'
+11:34:01  INFO        ✗ f20-f-8v.jpg
+11:34:01  INFO        ✗ f200-f-98v.jpg
+11:34:01  INFO        ✗ f201-f-99r.jpg
+11:34:01  INFO        ✗ f202-f-99v.jpg
+11:34:01  INFO        ✗ f203-f-100r.jpg
+11:34:01  INFO        ✗ f21-f-9r.jpg
+11:34:01  INFO        ✗ f22-f-9v.jpg
+11:34:01  INFO        ✗ f23-f-10r.jpg
+11:34:01  INFO        ✗ f25-f-11r.jpg
+11:34:01  INFO        ✗ f26-f-11v.jpg
+11:34:01  INFO        ✗ f27-f-12r.jpg
+11:34:01  INFO        ✗ f28-f-12v.jpg
+11:34:01  INFO        ✗ f29-f-13r.jpg
+11:34:01  WARNING     Impossible d'extraire le folio depuis : 'f3-insert.jpg'
+11:34:01  INFO        ✗ f30-f-13v.jpg
+11:34:01  INFO        ✗ f31-f-14r.jpg
+11:34:01  INFO        ✗ f32-f-14v.jpg
+11:34:01  INFO        ✗ f33-f-15r.jpg
+11:34:01  INFO        ✗ f34-f-15v.jpg
+11:34:01  INFO        ✗ f35-f-16r.jpg
+11:34:01  INFO        ✗ f37-f-17r.jpg
+11:34:01  INFO        ✗ f38-f-17v.jpg
+11:34:01  INFO        ✗ f39-f-18r.jpg
+11:34:01  WARNING     Impossible d'extraire le folio depuis : 'f4-insert.jpg'
+11:34:01  INFO        ✗ f40-f-18v.jpg
+11:34:01  INFO        ✗ f41-f-19r.jpg
+11:34:01  INFO        ✗ f42-f-19v.jpg
+11:34:01  INFO        ✗ f43-f-20r.jpg
+11:34:01  INFO        ✗ f44-f-20v.jpg
+11:34:01  INFO        ✗ f45-f-21r.jpg
+11:34:01  INFO        ✗ f46-f-21v.jpg
+11:34:01  INFO        ✗ f47-f-22r.jpg
+11:34:01  INFO        ✗ f48-f-22v.jpg
+11:34:01  INFO        ✗ f49-f-23r.jpg
+11:34:01  INFO        ✗ f5-f-1r.jpg
+11:34:01  INFO        ✗ f50-f-23v.jpg
+11:34:01  INFO        ✗ f51-f-24r.jpg
+11:34:01  INFO        ✗ f52-f-24v.jpg
+11:34:01  INFO        ✗ f53-f-25r.jpg
+11:34:01  INFO        ✗ f54-f-25v.jpg
+11:34:01  INFO        ✗ f55-f-26r.jpg
+11:34:01  INFO        ✗ f56-f-26v.jpg
+11:34:01  INFO        ✗ f57-f-27r.jpg
+11:34:01  INFO        ✗ f58-f-27v.jpg
+11:34:01  INFO        ✗ f59-f-28r.jpg
+11:34:01  INFO        ✗ f6-f-1v.jpg
+11:34:01  INFO        ✗ f60-f-28v.jpg
+11:34:01  INFO        ✗ f61-f-29r.jpg
+11:34:01  INFO        ✗ f62-f-29v.jpg
+11:34:01  INFO        ✗ f63-f-30r.jpg
+11:34:01  INFO        ✗ f64-f-30v.jpg
+11:34:01  INFO        ✗ f65-f-31r.jpg
+11:34:01  INFO        ✗ f66-f-31v.jpg
+11:34:01  INFO        ✗ f67-f-32r.jpg
+11:34:01  INFO        ✗ f68-f-32v.jpg
+11:34:01  INFO        ✗ f69-f-33r.jpg
+11:34:01  INFO        ✗ f70-f-33v.jpg
+11:34:01  INFO        ✗ f71-f-34r.jpg
+11:34:01  INFO        ✗ f72-f-34v.jpg
+11:34:01  INFO        ✓ f73-f-35r.jpg
+11:34:01  INFO        ✓ f74-f-35v.jpg
+11:34:01  INFO        ✓ f75-f-36r.jpg
+11:34:01  INFO        ✓ f76-f-36v.jpg
+11:34:01  INFO        ✓ f77-f-37r.jpg
+11:34:01  INFO        ✓ f78-f-37v.jpg
+11:34:01  INFO        ✓ f79-f-38r.jpg
+11:34:01  INFO        ✗ f8-f-2v.jpg
+11:34:01  INFO        ✓ f80-f-38v.jpg
+11:34:01  INFO        ✓ f81-f-39r.jpg
+11:34:01  INFO        ✓ f82-f-39v.jpg
+11:34:01  INFO        ✓ f83-f-40r.jpg
+11:34:01  INFO        ✓ f84-f-40v.jpg
+11:34:01  INFO        ✓ f85-f-41r.jpg
+11:34:01  INFO        ✓ f86-f-41v.jpg
+11:34:01  INFO        ✓ f88-f-42v.jpg
+11:34:01  INFO        ✓ f89-f-43r.jpg
+11:34:01  INFO        ✗ f9-f-3r.jpg
+11:34:01  INFO        ✓ f90-f-43v.jpg
+11:34:01  INFO        ✓ f91-f-44r.jpg
+11:34:01  INFO        ✓ f92-f-44v.jpg
+11:34:01  INFO        ✓ f93-f-45r.jpg
+11:34:01  INFO        ✓ f94-f-45v.jpg
+11:34:01  INFO        ✓ f95-f-46r.jpg
+11:34:01  INFO        ✓ f96-f-46v.jpg
+11:34:01  INFO        ✓ f97-f-47r.jpg
+11:34:01  INFO        ✓ f98-f-47v.jpg
+11:34:01  INFO        ✓ f99-f-48r.jpg
+11:34:01  INFO      
+11:34:01  INFO      ============================================================
+11:34:01  INFO        Résumé
+11:34:01  INFO      ============================================================
+11:34:01  INFO        Fichiers ALTO traités  : 193
+11:34:01  INFO        Plages DuckDB chargées : 1
+11:34:01  INFO        Pages conservées       : 48
+11:34:01  INFO        Pages exclues          : 145
+11:34:01  INFO        Fichiers produits      : merged.xml, filtered.xml
+11:34:01  INFO        Log                    : pipeline_20260708_113401.log
+11:34:01  INFO      ============================================================

@@ -2,7 +2,11 @@
 src/merge.py
 ------------
 Fusionne les fichiers ALTO 4 d'un dossier en extrayant uniquement
-les <String CONTENT="..."/> appartenant aux blocs taggés MainZone.
+les <String CONTENT="..."/> appartenant aux blocs taggés MainZone,
+et uniquement pour les fichiers dont le folio est dans les page_ranges.
+
+Le filtre est appliqué AVANT le parsing XML : les fichiers hors plage
+ne sont jamais ouverts, ce qui allège le traitement sur gros volumes.
 """
 
 from pathlib import Path
@@ -58,23 +62,51 @@ def extract_strings_from_file(filepath: Path) -> tuple[str, list[str]]:
     return source_name, strings
 
 
-def merge_alto_folder(input_dir: Path, output_file: Path) -> int:
+def merge_and_filter(
+    input_dir: Path,
+    output_file: Path,
+    ranges: list[tuple],
+    extract_folio_fn,
+    folio_in_range_fn,
+) -> tuple[int, int, int]:
     """
-    Parcourt tous les fichiers .xml du dossier input_dir,
-    extrait les String MainZone et produit un XML fusionné.
-    Retourne le nombre de pages traitées.
+    Parcourt les fichiers ALTO, applique le filtre folio AVANT le parsing,
+    et ne fusionne que les fichiers dont le folio est dans les plages.
+
+    Retourne (fichiers_total, fichiers_conservés, lignes_extraites).
     """
     alto_files = sorted(input_dir.glob("*.xml"))
     if not alto_files:
         print(f"  [!] Aucun fichier .xml trouvé dans {input_dir}")
-        return 0
+        return 0, 0, 0
 
-    root_out = etree.Element("alto_merged")
+    root_out = etree.Element("alto_filtered")
     root_out.set("source_dir", str(input_dir))
+
+    total = len(alto_files)
+    kept = 0
+    skipped = 0
     total_strings = 0
 
     for filepath in alto_files:
-        print(f"  · {filepath.name}")
+
+        # ── Filtre folio AVANT parsing XML ───────────────────
+        # On extrait le folio depuis le nom de fichier uniquement,
+        # sans ouvrir le XML. Si le folio n'est pas dans les plages,
+        # on passe au fichier suivant sans aucune lecture disque.
+        folio = extract_folio_fn(filepath.name)
+
+        if folio is None:
+            print(f"  [!] Folio non extrait : {filepath.name}, ignoré.")
+            skipped += 1
+            continue
+
+        if not any(folio_in_range_fn(folio, r[0], r[1]) for r in ranges):
+            skipped += 1
+            continue
+
+        # ── Parsing XML uniquement si le folio passe le filtre ─
+        print(f"  ✓ {filepath.name}")
         source_name, strings = extract_strings_from_file(filepath)
 
         page_el = etree.SubElement(root_out, "page")
@@ -86,9 +118,10 @@ def merge_alto_folder(input_dir: Path, output_file: Path) -> int:
             line_el.text = content
             total_strings += 1
 
+        kept += 1
+
     tree_out = etree.ElementTree(root_out)
     etree.indent(tree_out, space="  ")
     tree_out.write(output_file, xml_declaration=True, encoding="UTF-8", pretty_print=True)
 
-    print(f"  → {len(alto_files)} fichier(s), {total_strings} ligne(s) extraite(s).")
-    return len(alto_files)
+    return total, kept, total_strings
